@@ -70,7 +70,7 @@ resource "oci_core_boot_volume" "catetral_stage_boot_volume" {
   }
 }
 
-resource "oci_core_instance" "master" {
+resource "oci_core_instance" "main" {
   compartment_id      = oci_identity_compartment.root.id
   availability_domain = data.oci_identity_availability_domain.availability_domain.name
 
