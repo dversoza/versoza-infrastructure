@@ -1,5 +1,5 @@
 data "oci_identity_tenancy" "root" {
-  tenancy_id = var.tenancy_ocid
+  tenancy_id = var.oci_tenancy_ocid
 }
 
 resource "oci_identity_compartment" "root" {
@@ -8,6 +8,6 @@ resource "oci_identity_compartment" "root" {
 }
 
 data "oci_identity_availability_domain" "availability_domain" {
-  compartment_id = var.tenancy_ocid
+  compartment_id = var.oci_tenancy_ocid
   ad_number      = 1
 }

@@ -19,12 +19,12 @@ terraform {
 
 provider "oci" {
   auth             = "APIKey"
-  tenancy_ocid     = var.tenancy_ocid
-  user_ocid        = var.user_ocid
-  fingerprint      = var.fingerprint
-  private_key      = var.private_key
-  private_key_path = var.private_key_path
-  region           = var.region
+  tenancy_ocid     = var.oci_tenancy_ocid
+  user_ocid        = var.oci_user_ocid
+  private_key      = var.oci_private_key
+  private_key_path = var.oci_private_key_path
+  fingerprint      = var.oci_private_key_fingerprint
+  region           = var.oci_region
 
   ignore_defined_tags = [
     "Oracle-Tags.CreatedBy",

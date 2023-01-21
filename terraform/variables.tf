@@ -1,31 +1,31 @@
-variable "tenancy_ocid" {
+variable "oci_tenancy_ocid" {
   description = "The OCID of the tenancy."
   type        = string
 }
 
-variable "user_ocid" {
+variable "oci_user_ocid" {
   description = "The OCID of the user."
   type        = string
 }
 
-variable "fingerprint" {
-  description = "The fingerprint for the user's API key."
-  type        = string
-}
-
-variable "private_key" {
+variable "oci_private_key" {
   description = "The API's Private key."
   type        = string
   default     = ""
 }
 
-variable "private_key_path" {
+variable "oci_private_key_path" {
   description = "The local path to the private API key."
   type        = string
   default     = ""
 }
 
-variable "region" {
+variable "oci_private_key_fingerprint" {
+  description = "The fingerprint for the user's API key."
+  type        = string
+}
+
+variable "oci_region" {
   description = "The region to deploy to."
   type        = string
 }
