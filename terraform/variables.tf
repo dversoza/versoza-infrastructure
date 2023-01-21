@@ -36,6 +36,33 @@ variable "cloudflare_api_token" {
   sensitive   = true
 }
 
+variable "cloudflare_zone_id" {
+  description = "The Cloudflare zone ID."
+  type        = string
+}
+
+variable "cloudflare_account_id" {
+  description = "The Cloudflare account ID."
+  type        = string
+}
+
+variable "cloudflare_dns_records" {
+  description = "The DNS records to create."
+  type = list(object({
+    name    = string
+    comment = optional(string)
+    type    = string
+    value   = string
+    ttl     = optional(number)
+    proxied = optional(bool)
+  }))
+}
+
+variable "domain" {
+  description = "The domain to deploy to."
+  type        = string
+}
+
 variable "catedral_prod_ssh_public_key" {
   description = "The public SSH key to use for the catedral-prod instance."
   type        = string
