@@ -6,6 +6,10 @@ terraform {
       source  = "oracle/oci"
       version = ">= 4.103.0, < 5.0.0"
     }
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = ">= 3.32.0, < 4.0.0"
+    }
   }
 
   cloud {
@@ -30,4 +34,8 @@ provider "oci" {
     "Oracle-Tags.CreatedBy",
     "Oracle-Tags.CreatedOn",
   ]
+}
+
+provider "cloudflare" {
+  api_token = var.cloudflare_api_token
 }

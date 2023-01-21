@@ -30,6 +30,12 @@ variable "oci_region" {
   type        = string
 }
 
+variable "cloudflare_api_token" {
+  description = "The Cloudflare API token."
+  type        = string
+  sensitive   = true
+}
+
 variable "catedral_prod_ssh_public_key" {
   description = "The public SSH key to use for the catedral-prod instance."
   type        = string
